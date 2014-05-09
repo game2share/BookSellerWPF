@@ -1,0 +1,16 @@
+﻿<Window x:Class="BookSellerCS.detailLivreAdmin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="detailLivreAdmin" Height="350" Width="729"
+        ResizeMode="NoResize">
+    <Grid>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="titre" VerticalAlignment="Top" Width="120" Margin="299,32,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="auteur" VerticalAlignment="Top" Width="120" Margin="299,74,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="isbn" VerticalAlignment="Top" Width="120" Margin="299,120,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="genre" VerticalAlignment="Top" Width="120" Margin="299,170,0,0"/>
+        <Button Content="Retour" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="64,274,0,0"/>
+        <Button Content="Modifier" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="327,274,0,0"/>
+        <Button Content="Supprimer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="602,274,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="stock" VerticalAlignment="Top" Width="120" Margin="299,216,0,0"/>
+    </Grid>
+</Window>

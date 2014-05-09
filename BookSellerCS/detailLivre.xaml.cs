@@ -15,27 +15,20 @@ using System.Windows.Shapes;
 namespace BookSellerCS
 {
     /// <summary>
-    /// Logique d'interaction pour authentification.xaml
+    /// Logique d'interaction pour detailLivre.xaml
     /// </summary>
-    public partial class authentification : Window
+    public partial class detailLivre : Window
     {
-        public authentification()
+        public detailLivre()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine(pwd.Password);
-
-            if (pwd.Password.Equals("test")){
-                // lancement de la fenêtre d'administration
-                admin a = new admin();
-                a.Show();
-                this.Close();
-            }else{
-                this.Close();
-            }
+            MainWindow mw = new MainWindow();
+            mw.Show();
+            this.Close();
         }
     }
 }

@@ -59,5 +59,12 @@ namespace BookSellerCS
             this.Show();  
   
         }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            detailLivre d = new detailLivre();
+            d.Show();
+            this.Close();
+        }
     }
 }

@@ -1,0 +1,18 @@
+﻿<Window x:Class="BookSellerCS.admin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="admin"  Height="350" Width="729"
+        ResizeMode="NoResize">
+    <Grid>
+        <Label Content="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ADMINISTRATION" HorizontalAlignment="Left" VerticalAlignment="Top" Width="723"/>
+        <Button Content="Créer" HorizontalAlignment="Left" Margin="67,270,0,0" VerticalAlignment="Top" Width="75"/>
+        <ListView HorizontalAlignment="Left" Height="168" Margin="67,82,0,0" VerticalAlignment="Top" Width="580" SelectionChanged="ListView_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Window>
