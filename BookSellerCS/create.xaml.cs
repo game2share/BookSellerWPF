@@ -15,33 +15,19 @@ using System.Windows.Shapes;
 namespace BookSellerCS
 {
     /// <summary>
-    /// Logique d'interaction pour admin.xaml
+    /// Logique d'interaction pour create.xaml
     /// </summary>
-    public partial class admin : Window
+    public partial class create : Window
     {
-        public admin()
+        public create()
         {
             InitializeComponent();
         }
 
-        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            detailLivreAdmin d = new detailLivreAdmin();
-            d.Show();
-            this.Close();
-        }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            create c = new create();
-            c.Show();
-            this.Close();
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            MainWindow mw = new MainWindow();
-            mw.Show();
+            admin a = new admin();
+            a.Show();
             this.Close();
         }
     }

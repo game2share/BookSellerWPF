@@ -74,6 +74,12 @@
     <Compile Include="admin.xaml.cs">
       <DependentUpon>admin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="create.xaml.cs">
+      <DependentUpon>create.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="detailLivre.xaml.cs">
+      <DependentUpon>detailLivre.xaml</DependentUpon>
+    </Compile>
     <Compile Include="detailLivreAdmin.xaml.cs">
       <DependentUpon>detailLivreAdmin.xaml</DependentUpon>
     </Compile>
@@ -93,6 +99,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="commande.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="create.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="detailLivre.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
