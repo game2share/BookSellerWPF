@@ -1,0 +1,10 @@
+﻿<Window x:Class="BookSellerCS.commande"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="commande" Height="350" Width="729"
+       ResizeMode="NoResize">
+    <Grid>
+        <Button Content="Fermer l'application" HorizontalAlignment="Left" VerticalAlignment="Top" Width="135" Margin="288,247,0,0" Click="Button_Click"/>
+
+    </Grid>
+</Window>
