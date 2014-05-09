@@ -71,6 +71,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="type.xaml.cs">
+      <DependentUpon>type.xaml</DependentUpon>
+    </Compile>
+    <Page Include="auteur.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="authentification.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -87,6 +94,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="auteur.xaml.cs">
+      <DependentUpon>auteur.xaml</DependentUpon>
+    </Compile>
     <Compile Include="authentification.xaml.cs">
       <DependentUpon>authentification.xaml</DependentUpon>
     </Compile>
@@ -98,6 +108,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Panier.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="type.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

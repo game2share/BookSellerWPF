@@ -35,9 +35,29 @@ namespace BookSellerCS
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             authentification a = new authentification();
-            a.Show(); 
+            a.Show();
             this.Close();
 
+        }
+
+        private void SendAuteur(object sender, RoutedEventArgs e)
+        {
+            auteur a = new auteur();
+            a.Show();
+            this.Close();
+        }
+
+        private void SendType(object sender, RoutedEventArgs e)
+        {
+            type t = new type();
+            t.Show();
+            this.Close();
+        }
+
+        private void ISBN(object sender, RoutedEventArgs e)
+        {
+            this.Show();  
+  
         }
     }
 }
