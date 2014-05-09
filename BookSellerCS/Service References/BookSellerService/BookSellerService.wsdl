@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BookSellerService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:1825/BookSellerService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:1825/BookSellerService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1825/BookSellerService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BookSellerWCF" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBookSellerService_getBookById_InputMessage">
+    <wsdl:part name="parameters" element="tns:getBookById" />
+  </wsdl:message>
+  <wsdl:message name="IBookSellerService_getBookById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getBookByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBookSellerService_getAllBooks_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllBooks" />
+  </wsdl:message>
+  <wsdl:message name="IBookSellerService_getAllBooks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllBooksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBookSellerService_getBooksByAuthor_InputMessage">
+    <wsdl:part name="parameters" element="tns:getBooksByAuthor" />
+  </wsdl:message>
+  <wsdl:message name="IBookSellerService_getBooksByAuthor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getBooksByAuthorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBookSellerService_getBookByGenre_InputMessage">
+    <wsdl:part name="parameters" element="tns:getBookByGenre" />
+  </wsdl:message>
+  <wsdl:message name="IBookSellerService_getBookByGenre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getBookByGenreResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBookSellerService">
+    <wsdl:operation name="getBookById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBookSellerService/getBookById" message="tns:IBookSellerService_getBookById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBookSellerService/getBookByIdResponse" message="tns:IBookSellerService_getBookById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllBooks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBookSellerService/getAllBooks" message="tns:IBookSellerService_getAllBooks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBookSellerService/getAllBooksResponse" message="tns:IBookSellerService_getAllBooks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getBooksByAuthor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBookSellerService/getBooksByAuthor" message="tns:IBookSellerService_getBooksByAuthor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBookSellerService/getBooksByAuthorResponse" message="tns:IBookSellerService_getBooksByAuthor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getBookByGenre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBookSellerService/getBookByGenre" message="tns:IBookSellerService_getBookByGenre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBookSellerService/getBookByGenreResponse" message="tns:IBookSellerService_getBookByGenre_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBookSellerService" type="tns:IBookSellerService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getBookById">
+      <soap:operation soapAction="http://tempuri.org/IBookSellerService/getBookById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllBooks">
+      <soap:operation soapAction="http://tempuri.org/IBookSellerService/getAllBooks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBooksByAuthor">
+      <soap:operation soapAction="http://tempuri.org/IBookSellerService/getBooksByAuthor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBookByGenre">
+      <soap:operation soapAction="http://tempuri.org/IBookSellerService/getBookByGenre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BookSellerService">
+    <wsdl:port name="BasicHttpBinding_IBookSellerService" binding="tns:BasicHttpBinding_IBookSellerService">
+      <soap:address location="http://localhost:1825/BookSellerService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d7546065-7567-40c0-affc-cfe1e3befaed" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1825/BookSellerService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BookSellerService.xsd" MetadataType="Schema" ID="e29e2394-5b53-409f-ad72-1d3eeff58159" SourceId="1" SourceUrl="http://localhost:1825/BookSellerService.svc?xsd=xsd0" />
+    <MetadataFile FileName="BookSellerService.disco" MetadataType="Disco" ID="7fbc5bc7-152e-4e88-a823-0532418fab61" SourceId="1" SourceUrl="http://localhost:1825/BookSellerService.svc?disco" />
+    <MetadataFile FileName="BookSellerService1.xsd" MetadataType="Schema" ID="b421107f-8882-49fe-840c-25e012422ad5" SourceId="1" SourceUrl="http://localhost:1825/BookSellerService.svc?xsd=xsd1" />
+    <MetadataFile FileName="BookSellerService2.xsd" MetadataType="Schema" ID="8f22052b-37dc-4476-acf7-2de0b1c432d6" SourceId="1" SourceUrl="http://localhost:1825/BookSellerService.svc?xsd=xsd2" />
+    <MetadataFile FileName="BookSellerService.wsdl" MetadataType="Wsdl" ID="7d6a1a6a-f1fe-4736-a1ac-7455c77542ff" SourceId="1" SourceUrl="http://localhost:1825/BookSellerService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

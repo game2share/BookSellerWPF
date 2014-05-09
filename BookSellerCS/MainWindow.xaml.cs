@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BookSellerCS.BookSellerService;
 
 namespace BookSellerCS
 {
@@ -22,7 +23,13 @@ namespace BookSellerCS
     {
         public MainWindow()
         {
+            
             InitializeComponent();
+            BookSellerServiceClient b = new BookSellerServiceClient();
+            
+            listeLivres.ItemsSource=b.getAllBooks();
+
+        
         }
 
         private void ButtonClick(object sender, RoutedEventArgs e)

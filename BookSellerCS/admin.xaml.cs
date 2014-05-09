@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using BookSellerCS.BookSellerService;
+
 
 namespace BookSellerCS
 {
@@ -22,6 +24,9 @@ namespace BookSellerCS
         public admin()
         {
             InitializeComponent();
+            BookSellerServiceClient b = new BookSellerServiceClient();
+
+            listeLivres.ItemsSource = b.getAllBooks();
         }
 
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
