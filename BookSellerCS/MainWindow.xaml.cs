@@ -21,6 +21,8 @@ namespace BookSellerCS
     /// </summary>
     public partial class MainWindow : Window
     {
+        private BookSellerService.Book selectedBook = null;
+        private List<BookSellerService.Book> panierBooks = new List<Book>();
         public MainWindow()
         {
             
@@ -34,16 +36,15 @@ namespace BookSellerCS
 
         private void ButtonClick(object sender, RoutedEventArgs e)
         {
-            Panier p = new Panier();
+            Panier p = new Panier(panierBooks);
             p.Show();
-            this.Close();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             authentification a = new authentification();
             a.Show();
-            this.Close();
+            
 
         }
 
@@ -51,14 +52,12 @@ namespace BookSellerCS
         {
             auteur a = new auteur();
             a.Show();
-            this.Close();
         }
 
         private void SendType(object sender, RoutedEventArgs e)
         {
             type t = new type();
             t.Show();
-            this.Close();
         }
 
         private void ISBN(object sender, RoutedEventArgs e)
@@ -69,9 +68,16 @@ namespace BookSellerCS
 
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            detailLivre d = new detailLivre();
+            ListView lv = (ListView)sender;
+            selectedBook = (BookSellerService.Book) lv.SelectedItem;
+            detailLivre d = new detailLivre(this, selectedBook);
             d.Show();
-            this.Close();
+        }
+
+        public void AjoutPanier()
+        {
+            if(selectedBook != null)
+                panierBooks.Add(selectedBook);
         }
     }
 }

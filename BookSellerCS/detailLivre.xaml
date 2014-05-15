@@ -4,13 +4,18 @@
         Title="detailLivre" Height="450" Width="900"
         ResizeMode="NoResize">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding Title}" VerticalAlignment="Top" Width="120" Margin="299,32,0,0" IsEnabled="False"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding Author}" VerticalAlignment="Top" Width="120" Margin="299,74,0,0" IsEnabled="False"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding Id}" VerticalAlignment="Top" Width="120" Margin="299,120,0,0" IsEnabled="False"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding Price}" VerticalAlignment="Top" Width="120" Margin="299,170,0,0" IsEnabled="False"/>
-        <Button Content="Retour" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="64,274,0,0" Click="Button_Click" />
-        <Button Content="ajouter panier" HorizontalAlignment="Left" VerticalAlignment="Top" Width="89" Margin="588,274,0,0"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding Stock}" VerticalAlignment="Top" Width="120" Margin="299,216,0,0" IsEnabled="False"/>
+        <TextBox Name="title" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="344,36,0,0" IsEnabled="False"/>
+        <TextBox Name="author" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="344,81,0,0" IsEnabled="False"/>
+        <TextBox Name="id" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="344,118,0,0" IsEnabled="False"/>
+        <TextBox Name="price"  HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="344,155,0,0" IsEnabled="False"/>
+        <Button  Content="Retour" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="64,274,0,0" Click="Button_Click" />
+        <Button Content="ajouter panier" HorizontalAlignment="Left" VerticalAlignment="Top" Width="89" Margin="588,274,0,0" Click="Ajout_Panier"/>
+        <TextBox Name="stock"  HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="344,196,0,0" IsEnabled="False"/>
+        <Label Content="Titre" HorizontalAlignment="Left" Margin="281,33,0,0" VerticalAlignment="Top"/>
+        <Label Content="Auteur" HorizontalAlignment="Left" Margin="281,78,0,0" VerticalAlignment="Top"/>
+        <Label Content="ISBN" HorizontalAlignment="Left" Margin="281,118,0,0" VerticalAlignment="Top"/>
+        <Label Content="Prix" HorizontalAlignment="Left" Margin="281,152,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.558,0.021"/>
+        <Label Content="Stock" HorizontalAlignment="Left" Margin="281,193,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
 

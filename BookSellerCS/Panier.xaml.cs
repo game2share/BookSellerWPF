@@ -19,15 +19,17 @@ namespace BookSellerCS
     /// </summary>
     public partial class Panier : Window
     {
-        public Panier()
+        List<BookSellerService.Book> listeBook = null;
+        public Panier(List<BookSellerService.Book> b)
         {
+            listeBook = b;
             InitializeComponent();
-        }
 
+            listeLivres.ItemsSource = listeBook;
+
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mw = new MainWindow();
-            mw.Show();
             this.Close();
         }
 

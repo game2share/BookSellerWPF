@@ -34,8 +34,7 @@ namespace BookSellerCS
                 a.Show();
                 this.Close();
             }else{
-                MainWindow mw = new MainWindow();
-                mw.Show();
+          
                 this.Close();
             }
         }

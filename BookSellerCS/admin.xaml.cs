@@ -21,6 +21,7 @@ namespace BookSellerCS
     /// </summary>
     public partial class admin : Window
     {
+        BookSellerService.Book SelectedBook = null;
         public admin()
         {
             InitializeComponent();
@@ -31,7 +32,10 @@ namespace BookSellerCS
 
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            detailLivreAdmin d = new detailLivreAdmin();
+
+            ListView lv = (ListView)sender;
+            SelectedBook = (BookSellerService.Book)lv.SelectedItem; 
+            detailLivreAdmin d = new detailLivreAdmin(SelectedBook);
             d.Show();
             this.Close();
         }

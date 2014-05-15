@@ -19,16 +19,30 @@ namespace BookSellerCS
     /// </summary>
     public partial class detailLivre : Window
     {
-        public detailLivre()
-        {
-            InitializeComponent();
-        }
 
+        private MainWindow main = null;
+        private BookSellerService.Book b = null;
+        public detailLivre(MainWindow main, BookSellerService.Book b) 
+        {
+            this.b = b;
+            this.main = main;
+            InitializeComponent();
+            title.Text = b.Title;
+            author.Text = b.Author;
+            id.Text = b.Id;
+            price.Text = ""+b.Price;
+            //stock.Text = b
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mw = new MainWindow();
-            mw.Show();
+         
             this.Close();
+        }
+
+        private void Ajout_Panier(object sender, RoutedEventArgs e){
+
+            main.AjoutPanier();
+
         }
     }
 }

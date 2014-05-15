@@ -19,15 +19,20 @@ namespace BookSellerCS
     /// </summary>
     public partial class detailLivreAdmin : Window
     {
-        public detailLivreAdmin()
+        private BookSellerService.Book b = null;
+        public detailLivreAdmin(BookSellerService.Book b)
         {
             InitializeComponent();
+            this.b = b;
+            title.Text = b.Title;
+            author.Text = b.Author;
+            id.Text = b.Id;
+            price.Text = "" + b.Price;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            admin a = new admin();
-            a.Show();
+      
             this.Close();
         }
     }
