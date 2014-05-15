@@ -23,13 +23,13 @@ namespace BookSellerCS
     {
         private BookSellerService.Book selectedBook = null;
         private List<BookSellerService.Book> panierBooks = new List<Book>();
+        private BookSellerServiceClient client = new BookSellerServiceClient();
         public MainWindow()
         {
             
             InitializeComponent();
-            BookSellerServiceClient b = new BookSellerServiceClient();
             
-            listeLivres.ItemsSource=b.getAllBooks();
+            listeLivres.ItemsSource=client.getAllBooks();
 
         
         }
@@ -62,8 +62,15 @@ namespace BookSellerCS
 
         private void ISBN(object sender, RoutedEventArgs e)
         {
-            this.Show();  
-  
+            List<BookSellerService.Book> list = new List<BookSellerService.Book>();
+            String id = tbISBN.Text;
+            if(id == null || id == "")
+                listeLivres.ItemsSource = client.getAllBooks();
+            else
+            {
+                list.Add(client.getBookById(id));
+                listeLivres.ItemsSource = list;
+            }
         }
 
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)

@@ -48,7 +48,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <TextBox HorizontalAlignment="Left" Height="25" Margin="480,20,0,0" TextWrapping="Wrap" Text="numéro ISBN" VerticalAlignment="Top" Width="160"/>
+        <TextBox x:Name="tbISBN" HorizontalAlignment="Left" Height="25" Margin="480,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="115,20,0,0" Height="25" Width="350" ><Run Language="fr-fr" Text="Recherche par numéro ISBN"/></TextBlock>
         <Button Content="GO" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" RenderTransformOrigin="8.933,1.818" Margin="660,20,0,0" Click="ISBN"/>
         <Button Content="Admin" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="338,379,0,0" Click="Button_Click"/>

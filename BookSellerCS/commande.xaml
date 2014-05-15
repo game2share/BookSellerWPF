@@ -4,7 +4,7 @@
         Title="commande" Height="450" Width="900"
         ResizeMode="NoResize">
     <Grid>
-        <Button Content="Fermer l'application" HorizontalAlignment="Left" VerticalAlignment="Top" Width="135" Margin="288,247,0,0" Click="Button_Click"/>
+        <Button Content="Fermer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="135" Margin="288,247,0,0" Click="Button_Click"/>
 
     </Grid>
 </Window>

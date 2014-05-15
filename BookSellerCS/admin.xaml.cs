@@ -37,20 +37,16 @@ namespace BookSellerCS
             SelectedBook = (BookSellerService.Book)lv.SelectedItem; 
             detailLivreAdmin d = new detailLivreAdmin(SelectedBook);
             d.Show();
-            this.Close();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             create c = new create();
             c.Show();
-            this.Close();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            MainWindow mw = new MainWindow();
-            mw.Show();
             this.Close();
         }
     }

@@ -26,8 +26,7 @@ namespace BookSellerCS
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mw = new MainWindow();
-            mw.Show();
+            // TODO send entered data to MainWindow
             this.Close();
         
         }
