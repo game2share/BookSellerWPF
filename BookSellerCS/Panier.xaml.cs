@@ -54,8 +54,17 @@ namespace BookSellerCS
         {
             ListView lv = (ListView)sender;
             selectedBook = (BookSellerService.Book) lv.SelectedItem;
-            detailLivrePanier d = new detailLivrePanier(null, selectedBook);
-            d.Show();
-        } 
+            if (selectedBook != null)
+            {
+                detailLivrePanier d = new detailLivrePanier(this, selectedBook);
+                d.Show();
+            }
+        }
+
+        public void RemovePanier(BookSellerService.Book book)
+        {
+            panierBooks.Remove(book);
+            listeLivres.ItemsSource = panierBooks;
+        }
     }
 }
