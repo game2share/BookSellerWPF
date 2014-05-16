@@ -50,14 +50,28 @@ namespace BookSellerCS
 
         private void SendAuteur(object sender, RoutedEventArgs e)
         {
-            auteur a = new auteur();
-            a.Show();
+            List<BookSellerService.Book> list = new List<BookSellerService.Book>();
+            String id = authorN.Text;
+            if (id == null || id == "")
+                listeLivres.ItemsSource = client.getAllBooks();
+            else
+            {
+                list = client.getBooksByAuthor(id).ToList();
+                listeLivres.ItemsSource = list;
+            }
         }
 
         private void SendType(object sender, RoutedEventArgs e)
         {
-            type t = new type();
-            t.Show();
+            List<BookSellerService.Book> list = new List<BookSellerService.Book>();
+            String id =Btype.Text;
+            if (id == null || id == "")
+                listeLivres.ItemsSource = client.getAllBooks();
+            else
+            {
+                list = client.getBookByGenre(id).ToList();
+                listeLivres.ItemsSource = list;
+            }
         }
 
         private void ISBN(object sender, RoutedEventArgs e)
@@ -77,8 +91,12 @@ namespace BookSellerCS
         {
             ListView lv = (ListView)sender;
             selectedBook = (BookSellerService.Book) lv.SelectedItem;
-            detailLivre d = new detailLivre(this, selectedBook);
-            d.Show();
+
+            if(selectedBook != null)
+            {
+                detailLivre d = new detailLivre(this, selectedBook);
+                d.Show();
+            }
         }
 
         public void AjoutPanier()
