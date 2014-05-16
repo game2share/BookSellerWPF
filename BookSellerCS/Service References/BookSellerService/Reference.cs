@@ -167,10 +167,10 @@ namespace BookSellerCS.BookSellerService {
         System.Threading.Tasks.Task<BookSellerCS.BookSellerService.Book[]> getBookByGenreAsync(string genre);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookSellerService/takeBooks", ReplyAction="http://tempuri.org/IBookSellerService/takeBooksResponse")]
-        int takeBooks(BookSellerCS.BookSellerService.Book theBook, int nb);
+        int takeBooks(string theBook, int nb);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookSellerService/takeBooks", ReplyAction="http://tempuri.org/IBookSellerService/takeBooksResponse")]
-        System.Threading.Tasks.Task<int> takeBooksAsync(BookSellerCS.BookSellerService.Book theBook, int nb);
+        System.Threading.Tasks.Task<int> takeBooksAsync(string theBook, int nb);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -232,11 +232,11 @@ namespace BookSellerCS.BookSellerService {
             return base.Channel.getBookByGenreAsync(genre);
         }
         
-        public int takeBooks(BookSellerCS.BookSellerService.Book theBook, int nb) {
+        public int takeBooks(string theBook, int nb) {
             return base.Channel.takeBooks(theBook, nb);
         }
         
-        public System.Threading.Tasks.Task<int> takeBooksAsync(BookSellerCS.BookSellerService.Book theBook, int nb) {
+        public System.Threading.Tasks.Task<int> takeBooksAsync(string theBook, int nb) {
             return base.Channel.takeBooksAsync(theBook, nb);
         }
     }

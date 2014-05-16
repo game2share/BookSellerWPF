@@ -58,7 +58,7 @@
   <xs:element name="takeBooks">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/BookSellerWCF" minOccurs="0" name="theBook" nillable="true" type="q5:Book" />
+        <xs:element minOccurs="0" name="theBook" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="nb" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
