@@ -5,7 +5,7 @@
         ResizeMode="NoResize">
     <Grid>
         <Button Content="Auteur" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Width="75" Height="45" Click="SendAuteur"/>
-        <Button Content="Type" HorizontalAlignment="Left" Margin="20,80,0,0" VerticalAlignment="Top" Width="75" Height="45" Click="SendType"/>
+        <Button Content="Type" HorizontalAlignment="Left" Margin="20,138,0,0" VerticalAlignment="Top" Width="75" Height="45" Click="SendType"/>
             <Button Content="PANIER" HorizontalAlignment="Left" Margin="20,316,0,0" VerticalAlignment="Top" Width="75" Height="45" Click="ButtonClick"/>
             <ListView HorizontalAlignment="Left" Name="listeLivres" Height="301" Margin="115,60,0,0" VerticalAlignment="Top" Width="760" SelectionChanged="ListView_SelectionChanged">
             <ListView.View>
@@ -52,5 +52,8 @@
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="115,20,0,0" Height="25" Width="350" ><Run Language="fr-fr" Text="Recherche par numéro ISBN"/></TextBlock>
         <Button Content="GO" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" RenderTransformOrigin="8.933,1.818" Margin="660,20,0,0" Click="ISBN"/>
         <Button Content="Admin" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="338,379,0,0" Click="Button_Click"/>
+        <TextBox Name="authorN" HorizontalAlignment="Left" Height="23" Margin="20,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85"/>
+        <TextBox Name="Btype" HorizontalAlignment="Left" Height="23" Margin="20,183,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85" RenderTransformOrigin="0.532,6.123"/>
+
     </Grid>
 </Window>
