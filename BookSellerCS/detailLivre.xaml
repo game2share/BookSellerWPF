@@ -16,6 +16,8 @@
         <Label Content="ISBN" HorizontalAlignment="Left" Margin="281,118,0,0" VerticalAlignment="Top"/>
         <Label Content="Prix" HorizontalAlignment="Left" Margin="281,152,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.558,0.021"/>
         <Label Content="Stock" HorizontalAlignment="Left" Margin="281,193,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="nbSelected" HorizontalAlignment="Left" Height="23" Margin="463,273,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Nb" HorizontalAlignment="Left" Margin="419,270,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
 

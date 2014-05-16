@@ -41,7 +41,8 @@ namespace BookSellerCS
 
         private void Ajout_Panier(object sender, RoutedEventArgs e){
 
-            main.AjoutPanier();
+            int nb = int.Parse(nbSelected.Text);
+            main.AjoutPanier(nb);
 
         }
     }
