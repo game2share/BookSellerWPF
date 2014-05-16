@@ -112,6 +112,15 @@ namespace BookSellerCS
         {
             if (selectedBook != null)
             {
+                if (nb <= selectedBook.Stock)
+                {
+                    selectedBook.Stock -= nb;
+                    MessageBox.Show("Ajouté au panier avec succès.");
+                }
+                else
+                    MessageBox.Show("Impossible de commander plus que disponnible en stock");
+
+
                 BookSellerService.Book b = null;
                 bool found = false;
 
@@ -140,18 +149,6 @@ namespace BookSellerCS
 
                     b = book;
                 }
-                
-                if (b.Stock > selectedBook.Stock)
-                {
-                    MessageBox.Show("Impossible de commander plus de livre que disponnible en stock.");
-                    if(found)
-                        b.Stock -= nb;
-                    else
-                        panierBooks.Remove(b);
-                }
-                else
-                    MessageBox.Show("Ajouté au panier avec succès.");
-
             }
         }
 
