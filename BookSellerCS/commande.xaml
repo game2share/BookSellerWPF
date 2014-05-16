@@ -4,7 +4,8 @@
         Title="commande" Height="450" Width="900"
         ResizeMode="NoResize">
     <Grid>
-        <Button Content="Fermer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="135" Margin="288,247,0,0" Click="Button_Click"/>
+        <Button Content="Fermer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="135" Margin="373,290,0,0" Click="Button_Click"/>
+        <Label Content="Merci pour votre commande, bonne lecture!&#xD;&#xA;&#xD;&#xA; &#xD;&#xA;&#xD;&#xA;" HorizontalAlignment="Left" Margin="329,103,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.751,-1.493" Height="140" Width="330"/>
 
     </Grid>
 </Window>
