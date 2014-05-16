@@ -5,13 +5,14 @@
         ResizeMode="NoResize">
     <Grid>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="721" Height="27"><Run Language="fr-fr" Text="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;MON PANIER"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="584,294,0,0" Width="52"><Run Language="fr-fr" Text="Total TTC"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="586,273,0,0"><Run Language="fr-fr" Text="Total HT"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="651,294,0,0"><Run Language="fr-fr" Text="19.99"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="651,273,0,0"><Run Language="fr-fr" Text="15.99"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="626,355,0,0" Width="52"><Run Language="fr-fr" Text="Total TTC"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="628,334,0,0"><Run Language="fr-fr" Text="Total HT"/></TextBlock>
+        <TextBlock  Name="TTC" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="693,355,0,0" RenderTransformOrigin="0.822,0.599"/>
+        <TextBlock Name="HT" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="693,339,0,0" RenderTransformOrigin="0.822,0.599"/>
+
         <Button Content="RETOUR LISTE" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Margin="150,32,0,0" Click="Button_Click"/>
         <Button Content="COMMANDER" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="484,32,0,0" Click="Commander" />
-        <ListView HorizontalAlignment="Left" Name="listeLivres" Height="301" Margin="24,97,0,0" VerticalAlignment="Top" Width="760" SelectionChanged="listeLivres_SelectionChanged" >
+        <ListView HorizontalAlignment="Left" Name="listeLivres" Height="200" Margin="10,73,0,0" VerticalAlignment="Top" Width="760" SelectionChanged="listeLivres_SelectionChanged" >
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="ISBN" >
