@@ -25,10 +25,17 @@ namespace BookSellerCS
         List<BookSellerService.Book> listeBook = null;
         public Panier(List<BookSellerService.Book> b)
         {
+            double prix = 0;
             listeBook = b;
             InitializeComponent();
-
+            foreach (BookSellerService.Book book in b)
+            {
+                prix += book.Price * book.Stock;
+            }
             listeLivres.ItemsSource = listeBook;
+            HT.Text = "" + prix;
+            TTC.Text = "" + prix * 1.055;
+
 
         }
         private void Button_Click(object sender, RoutedEventArgs e)

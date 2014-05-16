@@ -59,6 +59,9 @@ namespace BookSellerCS
                 list = client.getBooksByAuthor(id).ToList();
                 listeLivres.ItemsSource = list;
             }
+
+            Btype.Text = "";
+            tbISBN.Text = "";
         }
 
         private void SendType(object sender, RoutedEventArgs e)
@@ -72,6 +75,9 @@ namespace BookSellerCS
                 list = client.getBookByGenre(id).ToList();
                 listeLivres.ItemsSource = list;
             }
+
+            authorN.Text = "";
+            tbISBN.Text = "";
         }
 
         private void ISBN(object sender, RoutedEventArgs e)
@@ -85,6 +91,9 @@ namespace BookSellerCS
                 list.Add(client.getBookById(id));
                 listeLivres.ItemsSource = list;
             }
+
+            authorN.Text = "";
+            Btype.Text = "";
         }
 
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -99,10 +108,33 @@ namespace BookSellerCS
             }
         }
 
-        public void AjoutPanier()
+        public void AjoutPanier(int nb)
         {
-            if(selectedBook != null)
-                panierBooks.Add(selectedBook);
+            if (selectedBook != null)
+            {
+                bool found = false;
+                foreach(BookSellerService.Book book in panierBooks)
+                {
+                    if (book.Id == selectedBook.Id)
+                    {
+                        found = true;
+
+                        book.Stock += nb;
+                    }
+                }
+
+                if(!found)
+                {
+                    BookSellerService.Book b = new BookSellerService.Book();
+                    b.Id = selectedBook.Id;
+                    b.Author = selectedBook.Author;
+                    b.Title = selectedBook.Title;
+                    b.Price = selectedBook.Price;
+                    b.Genre = selectedBook.Genre;
+                    b.Stock = nb;
+                    panierBooks.Add(b);
+                }
+            }
         }
 
     }
