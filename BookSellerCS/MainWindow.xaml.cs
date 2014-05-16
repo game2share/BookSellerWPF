@@ -104,5 +104,6 @@ namespace BookSellerCS
             if(selectedBook != null)
                 panierBooks.Add(selectedBook);
         }
+
     }
 }

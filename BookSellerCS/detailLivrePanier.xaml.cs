@@ -21,11 +21,12 @@ namespace BookSellerCS
     {
 
         private MainWindow main = null;
+        private Panier panier = null;
         private BookSellerService.Book b = null;
-        public detailLivrePanier(MainWindow main, BookSellerService.Book b) 
+        public detailLivrePanier(Panier main, BookSellerService.Book b) 
         {
             this.b = b;
-            this.main = main;
+            this.panier = main;
             InitializeComponent();
             title.Text = b.Title;
             author.Text = b.Author;
@@ -41,7 +42,8 @@ namespace BookSellerCS
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            
+            panier.RemovePanier(b);
+            this.Close();
         }
     }
 }
