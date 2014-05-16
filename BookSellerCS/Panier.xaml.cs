@@ -19,6 +19,9 @@ namespace BookSellerCS
     /// </summary>
     public partial class Panier : Window
     {
+
+        private BookSellerService.Book selectedBook = null;
+        private List<BookSellerService.Book> panierBooks = new List<BookSellerService.Book>();
         List<BookSellerService.Book> listeBook = null;
         public Panier(List<BookSellerService.Book> b)
         {
@@ -39,5 +42,13 @@ namespace BookSellerCS
             c.Show();
             this.Close();
         }
+
+        private void listeLivres_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ListView lv = (ListView)sender;
+            selectedBook = (BookSellerService.Book) lv.SelectedItem;
+            detailLivrePanier d = new detailLivrePanier(null, selectedBook);
+            d.Show();
+        } 
     }
 }

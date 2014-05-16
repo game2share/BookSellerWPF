@@ -79,6 +79,9 @@
     <Compile Include="create.xaml.cs">
       <DependentUpon>create.xaml</DependentUpon>
     </Compile>
+    <Compile Include="detailLivrePanier.xaml.cs">
+      <DependentUpon>detailLivrePanier.xaml</DependentUpon>
+    </Compile>
     <Compile Include="detailLivre.xaml.cs">
       <DependentUpon>detailLivre.xaml</DependentUpon>
     </Compile>
@@ -105,6 +108,10 @@
     <Page Include="create.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="detailLivrePanier.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="detailLivre.xaml">
       <SubType>Designer</SubType>

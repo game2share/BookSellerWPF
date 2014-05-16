@@ -11,7 +11,7 @@
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="651,273,0,0"><Run Language="fr-fr" Text="15.99"/></TextBlock>
         <Button Content="RETOUR LISTE" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Margin="150,32,0,0" Click="Button_Click"/>
         <Button Content="COMMANDER" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="484,32,0,0" Click="Commander" />
-        <ListView HorizontalAlignment="Left" Name="listeLivres" Height="301" Margin="24,97,0,0" VerticalAlignment="Top" Width="760" >
+        <ListView HorizontalAlignment="Left" Name="listeLivres" Height="301" Margin="24,97,0,0" VerticalAlignment="Top" Width="760" SelectionChanged="listeLivres_SelectionChanged" >
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="ISBN" >

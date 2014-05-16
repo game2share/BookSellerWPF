@@ -1,0 +1,21 @@
+﻿<Window x:Class="BookSellerCS.detailLivrePanier"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="detailLivrePanier" Height="450" Width="900"
+        ResizeMode="NoResize">
+    <Grid>
+        <TextBox Name="title" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="344,36,0,0" IsEnabled="False"/>
+        <TextBox Name="author" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="344,81,0,0" IsEnabled="False"/>
+        <TextBox Name="id" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="344,118,0,0" IsEnabled="False"/>
+        <TextBox Name="price"  HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="344,155,0,0" IsEnabled="False"/>
+        <Button  Content="Retour" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="64,274,0,0" Click="Button_Click" />
+        <TextBox Name="stock"  HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="344,196,0,0" IsEnabled="False"/>
+        <Label Content="Titre" HorizontalAlignment="Left" Margin="281,33,0,0" VerticalAlignment="Top"/>
+        <Label Content="Auteur" HorizontalAlignment="Left" Margin="281,78,0,0" VerticalAlignment="Top"/>
+        <Label Content="ISBN" HorizontalAlignment="Left" Margin="281,118,0,0" VerticalAlignment="Top"/>
+        <Label Content="Prix" HorizontalAlignment="Left" Margin="281,152,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.558,0.021"/>
+        <Label Content="Stock" HorizontalAlignment="Left" Margin="281,193,0,0" VerticalAlignment="Top"/>
+        <Button Content="Supprimer" HorizontalAlignment="Left" Margin="627,274,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+    </Grid>
+</Window>
+
