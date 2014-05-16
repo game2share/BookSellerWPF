@@ -112,7 +112,9 @@ namespace BookSellerCS
         {
             if (selectedBook != null)
             {
+                BookSellerService.Book b = null;
                 bool found = false;
+
                 foreach(BookSellerService.Book book in panierBooks)
                 {
                     if (book.Id == selectedBook.Id)
@@ -120,20 +122,36 @@ namespace BookSellerCS
                         found = true;
 
                         book.Stock += nb;
+
+                        b = book;
                     }
                 }
 
                 if(!found)
                 {
-                    BookSellerService.Book b = new BookSellerService.Book();
-                    b.Id = selectedBook.Id;
-                    b.Author = selectedBook.Author;
-                    b.Title = selectedBook.Title;
-                    b.Price = selectedBook.Price;
-                    b.Genre = selectedBook.Genre;
-                    b.Stock = nb;
-                    panierBooks.Add(b);
+                    BookSellerService.Book book = new BookSellerService.Book();
+                    book.Id = selectedBook.Id;
+                    book.Author = selectedBook.Author;
+                    book.Title = selectedBook.Title;
+                    book.Price = selectedBook.Price;
+                    book.Genre = selectedBook.Genre;
+                    book.Stock = nb;
+                    panierBooks.Add(book);
+
+                    b = book;
                 }
+                
+                if (b.Stock > selectedBook.Stock)
+                {
+                    MessageBox.Show("Impossible de commander plus de livre que disponnible en stock.");
+                    if(found)
+                        b.Stock -= nb;
+                    else
+                        panierBooks.Remove(b);
+                }
+                else
+                    MessageBox.Show("Ajouté au panier avec succès.");
+
             }
         }
     }
