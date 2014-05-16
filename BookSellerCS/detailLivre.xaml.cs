@@ -32,6 +32,11 @@ namespace BookSellerCS
             id.Text = b.Id;
             price.Text = ""+b.Price;
             stock.Text = "" + b.Stock;
+            if (b.Stock == 0)
+            {
+                addP.IsEnabled = false;
+            }
+
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
