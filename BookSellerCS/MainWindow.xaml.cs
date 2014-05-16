@@ -77,8 +77,12 @@ namespace BookSellerCS
         {
             ListView lv = (ListView)sender;
             selectedBook = (BookSellerService.Book) lv.SelectedItem;
-            detailLivre d = new detailLivre(this, selectedBook);
-            d.Show();
+
+            if(selectedBook != null)
+            {
+                detailLivre d = new detailLivre(this, selectedBook);
+                d.Show();
+            }
         }
 
         public void AjoutPanier()
