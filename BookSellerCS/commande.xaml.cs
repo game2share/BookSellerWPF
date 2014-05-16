@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookSellerCS.BookSellerService;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,13 +20,21 @@ namespace BookSellerCS
     /// </summary>
     public partial class commande : Window
     {
-        public commande()
+        private List<BookSellerService.Book> books = null;
+        private BookSellerServiceClient client = new BookSellerServiceClient();
+
+        public commande(List<BookSellerService.Book> books)
         {
+            this.books = books;
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            foreach(BookSellerService.Book book in books)
+            {
+                client.TakeBook(book.Id, book.Stock);
+            }
             this.Close();
         }
     }

@@ -45,7 +45,7 @@ namespace BookSellerCS
 
         private void Commander(object sender, RoutedEventArgs e)
         {
-            commande c = new commande();
+            commande c = new commande(panierBooks);
             c.Show();
             this.Close();
         }
