@@ -35,6 +35,9 @@ namespace BookSellerCS.BookSellerService {
         private double PriceField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int StockField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string TitleField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -100,6 +103,19 @@ namespace BookSellerCS.BookSellerService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Stock {
+            get {
+                return this.StockField;
+            }
+            set {
+                if ((this.StockField.Equals(value) != true)) {
+                    this.StockField = value;
+                    this.RaisePropertyChanged("Stock");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string Title {
             get {
                 return this.TitleField;
@@ -149,6 +165,12 @@ namespace BookSellerCS.BookSellerService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookSellerService/getBookByGenre", ReplyAction="http://tempuri.org/IBookSellerService/getBookByGenreResponse")]
         System.Threading.Tasks.Task<BookSellerCS.BookSellerService.Book[]> getBookByGenreAsync(string genre);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookSellerService/takeBooks", ReplyAction="http://tempuri.org/IBookSellerService/takeBooksResponse")]
+        int takeBooks(BookSellerCS.BookSellerService.Book theBook, int nb);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookSellerService/takeBooks", ReplyAction="http://tempuri.org/IBookSellerService/takeBooksResponse")]
+        System.Threading.Tasks.Task<int> takeBooksAsync(BookSellerCS.BookSellerService.Book theBook, int nb);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -208,6 +230,14 @@ namespace BookSellerCS.BookSellerService {
         
         public System.Threading.Tasks.Task<BookSellerCS.BookSellerService.Book[]> getBookByGenreAsync(string genre) {
             return base.Channel.getBookByGenreAsync(genre);
+        }
+        
+        public int takeBooks(BookSellerCS.BookSellerService.Book theBook, int nb) {
+            return base.Channel.takeBooks(theBook, nb);
+        }
+        
+        public System.Threading.Tasks.Task<int> takeBooksAsync(BookSellerCS.BookSellerService.Book theBook, int nb) {
+            return base.Channel.takeBooksAsync(theBook, nb);
         }
     }
 }

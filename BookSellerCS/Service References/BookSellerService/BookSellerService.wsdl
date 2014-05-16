@@ -31,6 +31,12 @@
   <wsdl:message name="IBookSellerService_getBookByGenre_OutputMessage">
     <wsdl:part name="parameters" element="tns:getBookByGenreResponse" />
   </wsdl:message>
+  <wsdl:message name="IBookSellerService_takeBooks_InputMessage">
+    <wsdl:part name="parameters" element="tns:takeBooks" />
+  </wsdl:message>
+  <wsdl:message name="IBookSellerService_takeBooks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:takeBooksResponse" />
+  </wsdl:message>
   <wsdl:portType name="IBookSellerService">
     <wsdl:operation name="getBookById">
       <wsdl:input wsaw:Action="http://tempuri.org/IBookSellerService/getBookById" message="tns:IBookSellerService_getBookById_InputMessage" />
@@ -47,6 +53,10 @@
     <wsdl:operation name="getBookByGenre">
       <wsdl:input wsaw:Action="http://tempuri.org/IBookSellerService/getBookByGenre" message="tns:IBookSellerService_getBookByGenre_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IBookSellerService/getBookByGenreResponse" message="tns:IBookSellerService_getBookByGenre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="takeBooks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBookSellerService/takeBooks" message="tns:IBookSellerService_takeBooks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBookSellerService/takeBooksResponse" message="tns:IBookSellerService_takeBooks_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IBookSellerService" type="tns:IBookSellerService">
@@ -80,6 +90,15 @@
     </wsdl:operation>
     <wsdl:operation name="getBookByGenre">
       <soap:operation soapAction="http://tempuri.org/IBookSellerService/getBookByGenre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="takeBooks">
+      <soap:operation soapAction="http://tempuri.org/IBookSellerService/takeBooks" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

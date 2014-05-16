@@ -11,7 +11,7 @@
         <Button Content="Retour" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="64,274,0,0" Click="Button_Click"/>
         <Button Content="Modifier" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="327,274,0,0"/>
         <Button Content="Supprimer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="602,274,0,0"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="stock" VerticalAlignment="Top" Width="120" Margin="344,204,0,0" RenderTransformOrigin="1.227,-0.809"/>
+        <TextBox x:Name="stock" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="stock" VerticalAlignment="Top" Width="120" Margin="344,204,0,0" RenderTransformOrigin="1.227,-0.809"/>
         <Label Content="Titre" HorizontalAlignment="Left" Margin="281,33,0,0" VerticalAlignment="Top"/>
         <Label Content="Auteur" HorizontalAlignment="Left" Margin="281,78,0,0" VerticalAlignment="Top"/>
         <Label Content="ISBN" HorizontalAlignment="Left" Margin="281,118,0,0" VerticalAlignment="Top"/>

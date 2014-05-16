@@ -28,6 +28,7 @@ namespace BookSellerCS
             author.Text = b.Author;
             id.Text = b.Id;
             price.Text = "" + b.Price;
+            stock.Text = "" + b.Stock;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
