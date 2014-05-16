@@ -30,7 +30,7 @@ namespace BookSellerCS
             InitializeComponent();
             foreach (BookSellerService.Book book in b)
             {
-                prix = prix + book.Price;
+                prix += book.Price * book.Stock;
             }
             listeLivres.ItemsSource = listeBook;
             HT.Text = "" + prix;
