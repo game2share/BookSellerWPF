@@ -21,7 +21,6 @@ namespace BookSellerCS
     {
 
         private BookSellerService.Book selectedBook = null;
-        private List<BookSellerService.Book> panierBooks = new List<BookSellerService.Book>();
         List<BookSellerService.Book> listeBook = null;
         public Panier(List<BookSellerService.Book> b)
         {
@@ -45,7 +44,7 @@ namespace BookSellerCS
 
         private void Commander(object sender, RoutedEventArgs e)
         {
-            commande c = new commande(panierBooks);
+            commande c = new commande(listeBook);
             c.Show();
             this.Close();
         }
@@ -63,8 +62,8 @@ namespace BookSellerCS
 
         public void RemovePanier(BookSellerService.Book book)
         {
-            panierBooks.Remove(book);
-            listeLivres.ItemsSource = panierBooks;
+            listeBook.Remove(book);
+            listeLivres.ItemsSource = listeBook;
         }
     }
 }

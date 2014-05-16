@@ -33,6 +33,7 @@ namespace BookSellerCS
         {
             foreach(BookSellerService.Book book in books)
             {
+                MessageBox.Show(book.Id + " " + book.Stock);
                 client.takeBooks(book.Id, book.Stock);
             }
             this.Close();
